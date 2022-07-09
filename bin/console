@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "persona_api"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+
+@client = PersonaApi::Client.new(api_key: "persona_production_e6ac4aee-0fb5-4a0e-9ba1-5a5db7854b5c")
+
+require "irb"
+IRB.start(__FILE__)
