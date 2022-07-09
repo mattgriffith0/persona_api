@@ -11,7 +11,7 @@ require "persona_api"
 # require "pry"
 # Pry.start
 
-@client = PersonaApi::Client.new(api_key: "persona_production_e6ac4aee-0fb5-4a0e-9ba1-5a5db7854b5c")
+@client = PersonaApi::Client.new(api_key: ENV["PERSONA_API_KEY"])
 
 require "irb"
 IRB.start(__FILE__)
