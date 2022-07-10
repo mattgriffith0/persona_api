@@ -6,7 +6,7 @@ The easiest and most complete rubygem for the [Persona](https://withpersona.com/
 
 Add this line to your application's Gemfile:
 
-    $ gem 'persona_api', github: "mattgriffith0/persona_api.rb"
+    gem 'persona_api', github: "mattgriffith0/persona_api.rb"
 
 And then execute:
 
@@ -46,7 +46,7 @@ results.next_page
 #=> "inq_NiHBQW47WfdPT58m4VcqFebx"
 
 # Retrieve the next page
-client.inquiries.list("page[after]" 5, next_page: results.next_page)
+client.inquiries.list("page[size]": 5, "page[after]": results.next_page)
 #=> PersonaAPI::Collection
 ```
 
@@ -63,7 +63,33 @@ client.accounts.remove_tag(act_id: "id", {})
 client.accounts.set_all_tags(act_id: "id", {})
 ```
 
+### Cases
+
+```ruby
+
+```
+
 ### Inquiries
+
+```ruby
+client.inquiries.list
+client.inquiries.create({})
+client.inquiries.retrieve(inq_id: "id")
+client.inquiries.update(inq_id: "id", {})
+client.inquiries.redact(inq_id: "id")
+client.inquiries.add_tag(inq_id: "id", {})
+client.inquiries.remove_tag(inq_id: "id", {})
+client.inquiries.set_all_tags(inq_id: "id", {})
+client.inquiries.resume(inq_id: "id")
+client.inquiries.approve(inq_id: "id", {})
+client.inquiries.decline(inq_id: "id", {})
+```
+
+### Verifications
+
+```ruby
+client.verifications.retrieve(ver_id: "id")
+```
 
 ## Development
 
@@ -82,3 +108,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the PersonaApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/persona_api/blob/master/CODE_OF_CONDUCT.md).
+
+
+## Thanks
+Massive thanks to [Chris Oliver](https://github.com/excid3), whose Vultr gem served as inspiration.

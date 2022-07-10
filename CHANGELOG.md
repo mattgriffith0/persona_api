@@ -1,3 +1,9 @@
+== [0.1.2] - 2022-07-09
+
+* Update README.md
+* Complete Inquiries and add Case endpoints
+* Update gemspec
+
 == [0.1.1] - 2022-07-09
 
 * Update README.md

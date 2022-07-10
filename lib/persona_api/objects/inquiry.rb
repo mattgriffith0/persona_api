@@ -24,5 +24,9 @@ module PersonaApi
     def started?
       attributes.started_at.nil? ? false: true
     end
+
+    def session_token
+      
+    end
   end
 end

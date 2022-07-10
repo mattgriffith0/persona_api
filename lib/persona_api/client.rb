@@ -16,6 +16,10 @@ module PersonaApi
       AccountsResource.new(self)
     end
 
+    def cases
+      CasesResource.new(self)
+    end
+
     def inquiries
       InquiriesResource.new(self)
     end

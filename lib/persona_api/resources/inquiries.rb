@@ -1,8 +1,21 @@
 module PersonaApi
   class InquiriesResource < Resource
+    def add_tag(**attributes)
+      post_request("inquiries/#{inq_id}/add-tag", body: attributes)
+      true
+    end
+
+    def approve(act_id:, **attributes)
+      post_request("inquiries/#{inq_id}/approve", body: attributes)
+    end
+
     def create(**attributes)
       # inquiry attributes must include one of 'template-id' or 'inquiry-template-id'
       Inquiry.new post_request("inquiries", body: attributes).body.dig("data")
+    end
+
+    def decline(act_id:, **attributes)
+      post_request("inquiries/#{inq_id}/decline", body: attributes)
     end
 
     def list(**params)
@@ -22,13 +35,17 @@ module PersonaApi
       true
     end
 
+    def resume(act_id:)
+      post_request("inquiries/#{inq_id}/resume").body
+    end
+
     def set_all_tags(inq_id:, **attributes)
       post_request("inquiries/#{inq_id}/set-tags", body: attributes)
       true
     end
 
     def update(inq_id:, **attributes)
-      patch_request("inquiries/#{inq_id}", body: attributes).body.dig("data")
+      Inquiry.new patch_request("inquiries/#{inq_id}", body: attributes).body.dig("data")
     end
   end
 end
