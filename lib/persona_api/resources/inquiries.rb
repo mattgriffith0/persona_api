@@ -1,6 +1,6 @@
 module PersonaApi
   class InquiriesResource < Resource
-    def add_tag(**attributes)
+    def add_tag(inq_id:, **attributes)
       post_request("inquiries/#{inq_id}/add-tag", body: attributes)
       true
     end

@@ -1,6 +1,6 @@
 # PersonaApi
 
-The easiest and most complete rubygem for the [Persona](https://withpersona.com/) API. Currently supports [APIv1](https://docs.withpersona.com/reference/introduction)
+The easiest and most complete rubygem for the [Persona](https://withpersona.com/) API. Currently supports [API v1](https://docs.withpersona.com/reference/introduction)
 
 ## Installation
 
@@ -74,6 +74,12 @@ client.cases.set_status(case_id: "id", {})
 client.cases.add_persona_objects(case_id: "id", {})
 ```
 
+### Documents
+
+```ruby
+client.documents.retrieve(doc_id: "id")
+```
+
 ### Inquiries
 
 ```ruby
@@ -90,6 +96,18 @@ client.inquiries.approve(inq_id: "id", {})
 client.inquiries.decline(inq_id: "id", {})
 ```
 
+### Reports
+
+```ruby
+client.reports.list
+client.reports.create({})
+client.reports.retrieve(rep_id: "id")
+client.reports.redact(rep_id: "id")
+client.reports.add_tag(rep_id: "id", {})
+client.reports.remove_tag(rep_id: "id", {})
+client.reports.set_all_tags(rep_id: "id", {})
+```
+
 ### Verifications
 
 ```ruby
@@ -104,11 +122,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/persona_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/persona_api/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mattgriffith0/persona_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/mattgriffith0/persona_api/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
@@ -117,3 +131,7 @@ Everyone interacting in the PersonaApi project's codebases, issue trackers, chat
 
 ## Thanks
 Massive thanks to [Chris Oliver](https://github.com/excid3), whose Vultr gem served as inspiration.
+
+## License
+
+[The MIT License (MIT)](https://github.com/mattgriffith0/persona_api/blob/main/LICENSE.txt)

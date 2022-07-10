@@ -14,10 +14,12 @@ module PersonaApi
   autoload :Inquiry, "persona_api/objects/inquiry"
   autoload :Verification, "persona_api/objects/verification"
   autoload :Case, "persona_api/objects/case"
+  autoload :Document, "persona_api/objects/document"
 
   # resources
   autoload :AccountsResource, "persona_api/resources/accounts"
   autoload :InquiriesResource, "persona_api/resources/inquiries"
   autoload :VerificationsResource, "persona_api/resources/verifications"
   autoload :CasesResource, "persona_api/resources/cases"
+  autoload :DocumentsResource, "persona_api/resources/documents"
 end

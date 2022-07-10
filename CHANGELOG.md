@@ -1,3 +1,9 @@
+== [0.1.4] - 2022-07-10
+
+* Update README.md
+* Add Documents and Reports endpoints
+* Minor bug fixes
+
 == [0.1.3] - 2022-07-09
 
 * Update README.md
