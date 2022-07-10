@@ -1,3 +1,8 @@
+== [0.1.3] - 2022-07-09
+
+* Update README.md
+* Minor bug fixes
+
 == [0.1.2] - 2022-07-09
 
 * Update README.md

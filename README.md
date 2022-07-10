@@ -66,7 +66,12 @@ client.accounts.set_all_tags(act_id: "id", {})
 ### Cases
 
 ```ruby
-
+client.cases.list
+client.cases.create({})
+client.cases.retrieve(case_id: "id")
+client.cases.assign(case_id: "id", {})
+client.cases.set_status(case_id: "id", {})
+client.cases.add_persona_objects(case_id: "id", {})
 ```
 
 ### Inquiries

@@ -5,7 +5,7 @@ module PersonaApi
       true
     end
 
-    def approve(act_id:, **attributes)
+    def approve(inq_id:, **attributes)
       post_request("inquiries/#{inq_id}/approve", body: attributes)
     end
 
@@ -14,7 +14,7 @@ module PersonaApi
       Inquiry.new post_request("inquiries", body: attributes).body.dig("data")
     end
 
-    def decline(act_id:, **attributes)
+    def decline(inq_id:, **attributes)
       post_request("inquiries/#{inq_id}/decline", body: attributes)
     end
 
@@ -30,13 +30,14 @@ module PersonaApi
       delete_request("inquiries/#{inq_id}")
     end
 
-    def remove_tag(act_id:, **attributes)
+    def remove_tag(inq_id:, **attributes)
       post_request("inquiries/#{inq_id}/remove-tag", body: attributes)
       true
     end
 
-    def resume(act_id:)
-      post_request("inquiries/#{inq_id}/resume").body
+    def resume(inq_id:, **attributes)
+      # this request will return only the session_token
+      post_request("inquiries/#{inq_id}/resume", body: attributes).body.dig("meta", "session_token")
     end
 
     def set_all_tags(inq_id:, **attributes)
