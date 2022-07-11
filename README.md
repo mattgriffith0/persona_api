@@ -6,7 +6,7 @@ The easiest and most complete rubygem for the [Persona](https://withpersona.com/
 
 Add this line to your application's Gemfile:
 
-    gem 'persona_api', github: "mattgriffith0/persona_api.rb"
+    gem 'persona_api', github: "mattgriffith0/persona_api"
 
 And then execute:
 
