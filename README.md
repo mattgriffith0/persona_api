@@ -29,11 +29,11 @@ The client then gives you access to all of the resources.
 
 The gem attempts to map as closely as possible to the Persona API so that you can easily convert API examples in to gem code.
 
-Responses are created as Objects like `PersonaAPI::Account`. Having types like `PersonaAPI::Inquiry` is useful for understanding the type of object you're working with. They're built using OpenStruct so that data is easily accessible in a Rubyish way.
+Responses are (in *almost* all cases) created as Objects like `PersonaAPI::Account`. Having types like `PersonaAPI::Inquiry` is useful for understanding the type of object you're working with. They're built using OpenStruct so that data is easily accessible in a Rubyish way.
 
 ##### Pagination
 
- `list` endpoints return pages of results. The result object will have a `data` key to access the results, as well as metadata like `next_page` and `prev_page` for retrieving the next and previous pages. You may also specify the number of results you would like to have returned, and for some resources, other specific filter params.
+ `list` endpoints return pages of results. The result object will have a `data` key to access the results, as well as metadata like `next_page` and `prev_page` for retrieving the next and previous pages. You may also specify the number of results you would like to have returned and, for some resources, other specific filter params.
 
 ```ruby
 results = client.inquiries.list("page[size]": 5)
@@ -116,9 +116,7 @@ client.verifications.retrieve(ver_id: "id")
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. This will create a `@client` for you to use, assuming you have assigned an API key to `ENV["PERSONA_API_KEY"]`.
 
 ## Contributing
 
@@ -126,7 +124,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/mattgr
 
 ## Code of Conduct
 
-Everyone interacting in the PersonaApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/persona_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the PersonaApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/mattgriffith0/persona_api/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## Thanks
