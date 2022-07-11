@@ -1,3 +1,9 @@
+== [0.1.5] - 2022-07-11
+
+* Update README.md
+* Add Lists, Events, and Files endpoints
+* Minor bug fixes
+
 == [0.1.4] - 2022-07-10
 
 * Update README.md

@@ -80,6 +80,19 @@ client.cases.add_persona_objects(case_id: "id", {})
 client.documents.retrieve(doc_id: "id")
 ```
 
+### Events
+
+```ruby
+client.events.list
+client.events.retrive(evt_id:)
+```
+
+### Files
+
+```ruby
+client.files.download(file_id:, file_name:)
+```
+
 ### Inquiries
 
 ```ruby
@@ -94,6 +107,23 @@ client.inquiries.set_all_tags(inq_id: "id", {})
 client.inquiries.resume(inq_id: "id")
 client.inquiries.approve(inq_id: "id", {})
 client.inquiries.decline(inq_id: "id", {})
+```
+
+### Lists
+
+```ruby
+client.lists.list
+client.lists.retrieve(lst_id: "id")
+client.lists.archive(lst_id: "id")
+client.lists.create_browser_fingerprint_list({})
+client.lists.create_country_list({})
+client.lists.create_email_address_list({})
+client.lists.create_face_list({})
+client.lists.create_geolocation_list({})
+client.lists.create_government_id_number_list({})
+client.lists.create_ip_address_list({})
+client.lists.create_name_list({})
+client.lists.create_phone_number_list({})
 ```
 
 ### Reports

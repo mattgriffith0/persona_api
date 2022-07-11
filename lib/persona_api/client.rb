@@ -20,8 +20,24 @@ module PersonaApi
       CasesResource.new(self)
     end
 
+    def documents
+      DocumentsResource.new(self)
+    end
+
+    def events
+      EventsResource.new(self)
+    end
+
     def inquiries
       InquiriesResource.new(self)
+    end
+
+    def lists
+      ListsResource.new(self)
+    end
+
+    def reports
+      ReportsResource.new(self)
     end
 
     def verifications

@@ -15,6 +15,10 @@ module PersonaApi
   autoload :Verification, "persona_api/objects/verification"
   autoload :Case, "persona_api/objects/case"
   autoload :Document, "persona_api/objects/document"
+  autoload :Report, "persona_api/objects/report"
+  autoload :File, "persona_api/objects/file"
+  autoload :Event, "persona_api/objects/event"
+  autoload :List, "persona_api/objects/list"
 
   # resources
   autoload :AccountsResource, "persona_api/resources/accounts"
@@ -22,4 +26,8 @@ module PersonaApi
   autoload :VerificationsResource, "persona_api/resources/verifications"
   autoload :CasesResource, "persona_api/resources/cases"
   autoload :DocumentsResource, "persona_api/resources/documents"
+  autoload :ReportsResource, "persona_api/resources/reports"
+  autoload :FilesResource, "persona_api/resources/files"
+  autoload :EventsResource, "persona_api/resources/events"
+  autoload :ListsResource, "persona_api/resources/lists"
 end
