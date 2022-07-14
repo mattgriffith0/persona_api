@@ -63,6 +63,13 @@ client.accounts.remove_tag(act_id: "id", {})
 client.accounts.set_all_tags(act_id: "id", {})
 ```
 
+### API Logs
+
+```ruby
+client.api_logs.list
+client.api_logs.retrieve(req_id: "id")
+```
+
 ### Cases
 
 ```ruby
@@ -136,6 +143,13 @@ client.reports.redact(rep_id: "id")
 client.reports.add_tag(rep_id: "id", {})
 client.reports.remove_tag(rep_id: "id", {})
 client.reports.set_all_tags(rep_id: "id", {})
+```
+
+### User Audit Logs
+
+```ruby
+client.user_audit_logs.list
+client.user_audit_logs.retrieve(ual_id: "id")
 ```
 
 ### Verifications

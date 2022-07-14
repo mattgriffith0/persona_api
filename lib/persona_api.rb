@@ -19,6 +19,9 @@ module PersonaApi
   autoload :File, "persona_api/objects/file"
   autoload :Event, "persona_api/objects/event"
   autoload :List, "persona_api/objects/list"
+  autoload :ApiLog, "persona_api/objects/api_log"
+  autoload :UserAuditLog, "persona_api/objects/user_audit_log"
+  autoload :ListItem, "persona_api/objects/list_item"
 
   # resources
   autoload :AccountsResource, "persona_api/resources/accounts"
@@ -30,4 +33,7 @@ module PersonaApi
   autoload :FilesResource, "persona_api/resources/files"
   autoload :EventsResource, "persona_api/resources/events"
   autoload :ListsResource, "persona_api/resources/lists"
+  autoload :ApiLogsResource, "persona_api/resources/api_logs"
+  autoload :UserAuditLogsResource, "persona_api/resources/user_audit_logs"
+  autoload :ListItemsResource, "persona_api/resoruces/list_items"
 end

@@ -1,3 +1,8 @@
+== [0.1.6] - 2022-07-14
+
+* Update README.md
+* Add Api Logs, User Audit Logs, List Items endpoints
+
 == [0.1.5] - 2022-07-11
 
 * Update README.md

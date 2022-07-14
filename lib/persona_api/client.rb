@@ -16,6 +16,10 @@ module PersonaApi
       AccountsResource.new(self)
     end
 
+    def api_logs
+      ApiLogsResource.new(self)
+    end
+
     def cases
       CasesResource.new(self)
     end
@@ -36,8 +40,16 @@ module PersonaApi
       ListsResource.new(self)
     end
 
+    def list_items
+      ListItemsResource.new(self)
+    end
+
     def reports
       ReportsResource.new(self)
+    end
+
+    def user_audit_logs
+      UserAuditLogsResource.new(self)
     end
 
     def verifications
