@@ -1,3 +1,8 @@
+== [0.1.7] - 2022-07-16
+
+* Update README.md
+* Add Print requests to multiple endpoints
+
 == [0.1.6] - 2022-07-14
 
 * Update README.md

@@ -106,6 +106,7 @@ client.files.download(file_id:, file_name:)
 client.inquiries.list
 client.inquiries.create({})
 client.inquiries.retrieve(inq_id: "id")
+client.inquiries.print(inq_id: "id")
 client.inquiries.update(inq_id: "id", {})
 client.inquiries.redact(inq_id: "id")
 client.inquiries.add_tag(inq_id: "id", {})
@@ -139,6 +140,7 @@ client.lists.create_phone_number_list({})
 client.reports.list
 client.reports.create({})
 client.reports.retrieve(rep_id: "id")
+client.reports.print(rep_id: "id")
 client.reports.redact(rep_id: "id")
 client.reports.add_tag(rep_id: "id", {})
 client.reports.remove_tag(rep_id: "id", {})
@@ -156,6 +158,7 @@ client.user_audit_logs.retrieve(ual_id: "id")
 
 ```ruby
 client.verifications.retrieve(ver_id: "id")
+client.verifications.print(ver_id: "id")
 ```
 
 ## Development

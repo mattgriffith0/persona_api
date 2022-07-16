@@ -16,6 +16,11 @@ module PersonaApi
       Collection.from_response get_request("reports", params: params), key: "data", type: Report
     end
 
+    def print(rep_id:)
+      get_request("reports/#{rep_id}/print")
+      true
+    end
+
     def retrieve(rep_id:)
       Report.new get_request("reports/#{rep_id}").body.dig("data")
     end

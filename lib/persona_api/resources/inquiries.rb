@@ -22,6 +22,11 @@ module PersonaApi
       Collection.from_response get_request("inquiries", params: params), key: "data", type: Inquiry
     end
 
+    def print(inq_id:)
+      get_request("inquiries/#{inq_id}/print")
+      true
+    end
+
     def retrieve(inq_id:)
       Inquiry.new get_request("inquiries/#{inq_id}").body.dig("data")
     end
