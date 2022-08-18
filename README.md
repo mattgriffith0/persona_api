@@ -18,7 +18,7 @@ Or install it yourself with:
 
 ## Usage
 
-To access the API, you'll need to create a `PersonaAPI::Client` and pass in your API key. You can find your API key in your [Persona dashboard](https://app.withpersona.com/dashboard/api-configuration).
+To access the API, you'll need to create a `PersonaApi::Client` and pass in your API key. You can find your API key in your [Persona dashboard](https://app.withpersona.com/dashboard/api-configuration).
 
 ```ruby
 client = PersonaApi::Client.new(api_key: ENV["PERSONA_API_KEY"])
@@ -29,7 +29,7 @@ The client then gives you access to all of the resources.
 
 The gem attempts to map as closely as possible to the Persona API so that you can easily convert API examples in to gem code.
 
-Responses are (in *almost* all cases) created as Objects like `PersonaAPI::Account`. Having types like `PersonaAPI::Inquiry` is useful for understanding the type of object you're working with. They're built using OpenStruct so that data is easily accessible in a Rubyish way.
+Responses are (in *almost* all cases) created as Objects like `PersonaApi::Account`. Having types like `PersonaApi::Inquiry` is useful for understanding the type of object you're working with. They're built using OpenStruct so that data is easily accessible in a Rubyish way.
 
 ##### Pagination
 
@@ -37,17 +37,17 @@ Responses are (in *almost* all cases) created as Objects like `PersonaAPI::Accou
 
 ```ruby
 results = client.inquiries.list("page[size]": 5)
-#=> PersonaAPI::Collection
+#=> PersonaApi::Collection
 
 results.data
-#=> [#<PersonaAPI::Inquiry>, #<PersonaAPI::Inquiry>]
+#=> [#<PersonaApi::Inquiry>, #<PersonaApi::Inquiry>]
 
 results.next_page
 #=> "inq_NiHBQW47WfdPT58m4VcqFebx"
 
 # Retrieve the next page
 client.inquiries.list("page[size]": 5, "page[after]": results.next_page)
-#=> PersonaAPI::Collection
+#=> PersonaApi::Collection
 ```
 
 ### Accounts
@@ -81,6 +81,14 @@ client.cases.set_status(case_id: "id", {})
 client.cases.add_persona_objects(case_id: "id", {})
 ```
 
+### Database Verifications
+
+```ruby
+client.database_verifications.create({})
+client.database_verifications.retrieve(ver_id: "id")
+client.database_verifications.submit(ver_id: "id", {})
+```
+
 ### Documents
 
 ```ruby
@@ -98,6 +106,14 @@ client.events.retrive(evt_id:)
 
 ```ruby
 client.files.download(file_id:, file_name:)
+```
+
+### Government ID Verifications
+
+```ruby
+client.government_id_verifications.create({})
+client.government_id_verifications.retrieve(ver_id: "id")
+client.government_id_verifications.submit(ver_id: "id", {})
 ```
 
 ### Inquiries
@@ -134,6 +150,29 @@ client.lists.create_name_list({})
 client.lists.create_phone_number_list({})
 ```
 
+### List Items
+
+```ruby
+
+```
+
+### Phone Carrier Verifications
+
+```ruby
+client.phone_carrier_verifications.create({})
+client.phone_carrier_verifications.retrieve(ver_id: "id")
+client.phone_carrier_verifications.submit(ver_id: "id", {})
+```
+
+### Phone Number Verifications
+
+```ruby
+client.phone_number_verifications.create({})
+client.phone_number_verifications.retrieve(ver_id: "id")
+client.phone_number_verifications.send_sms(ver_id: "id", {})
+client.phone_number_verifications.confirm(ver_id: "id", {})
+```
+
 ### Reports
 
 ```ruby
@@ -145,6 +184,14 @@ client.reports.redact(rep_id: "id")
 client.reports.add_tag(rep_id: "id", {})
 client.reports.remove_tag(rep_id: "id", {})
 client.reports.set_all_tags(rep_id: "id", {})
+```
+
+### TIN Database Verifications
+
+```ruby
+client.tin_database_verifications.create({})
+client.tin_database_verifications.retrieve(ver_id: "id")
+client.tin_database_verifications.submit(ver_id: "id", {})
 ```
 
 ### User Audit Logs

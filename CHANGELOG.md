@@ -1,3 +1,9 @@
+== [0.2.0] - 2022-08-18
+
+* Update README.md
+* Add Server API Verification Endpoints (Gov ID, Phone, Database, TIN)
+* Bug fixes
+
 == [0.1.7] - 2022-07-16
 
 * Update README.md

@@ -22,6 +22,11 @@ module PersonaApi
   autoload :ApiLog, "persona_api/objects/api_log"
   autoload :UserAuditLog, "persona_api/objects/user_audit_log"
   autoload :ListItem, "persona_api/objects/list_item"
+  autoload :GovernmentIdVerification, "persona_api/objects/government_id_verification"
+  autoload :DatabaseVerification, "persona_api/objects/database_verification"
+  autoload :PhoneNumberVerification, "persona_api/objects/phone_number_verification"
+  autoload :PhoneCarrierVerification, "persona_api/objects/phone_carrier_verification"
+  autoload :TinDatabaseVerification, "persona_api/objects/tin_database_verification"
 
   # resources
   autoload :AccountsResource, "persona_api/resources/accounts"
@@ -35,5 +40,10 @@ module PersonaApi
   autoload :ListsResource, "persona_api/resources/lists"
   autoload :ApiLogsResource, "persona_api/resources/api_logs"
   autoload :UserAuditLogsResource, "persona_api/resources/user_audit_logs"
-  autoload :ListItemsResource, "persona_api/resoruces/list_items"
+  autoload :ListItemsResource, "persona_api/resources/list_items"
+  autoload :GovernmentIdVerificationsResource, "persona_api/resources/government_id_verifications"
+  autoload :DatabaseVerificationsResource, "persona_api/resources/database_verifications"
+  autoload :PhoneNumberVerificationsResource, "persona_api/resources/phone_number_verifications"
+  autoload :PhoneCarrierVerificationsResource, "persona_api/resources/phone_carrier_verifications"
+  autoload :TinDatabaseVerificationsResource, "persona_api/resources/tin_database_verifications"
 end

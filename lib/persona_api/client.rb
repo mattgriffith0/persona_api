@@ -24,12 +24,24 @@ module PersonaApi
       CasesResource.new(self)
     end
 
+    def database_verifications
+      DatabaseVerificationsResource.new(self)
+    end
+
     def documents
       DocumentsResource.new(self)
     end
 
     def events
       EventsResource.new(self)
+    end
+
+    def files
+      FilesResource.new(self)
+    end
+
+    def government_id_verifications
+      GovernmentIdVerificationsResource.new(self)
     end
 
     def inquiries
@@ -44,8 +56,20 @@ module PersonaApi
       ListItemsResource.new(self)
     end
 
+    def phone_carrier_verifications
+      PhoneCarrierVerificationsResource.new(self)
+    end
+
+    def phone_number_verifications
+      PhoneNumberVerificationsResource.new(self)
+    end
+
     def reports
       ReportsResource.new(self)
+    end
+
+    def tin_database_verifications
+      TinDatabaseVerificationsResource.new(self)
     end
 
     def user_audit_logs
