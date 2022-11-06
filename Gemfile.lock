@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    persona_api (0.1.7)
+    persona_api (0.3.0)
       faraday (~> 1.7)
       faraday_middleware (~> 1.1)
 

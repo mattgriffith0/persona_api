@@ -194,6 +194,13 @@ client.tin_database_verifications.retrieve(ver_id: "id")
 client.tin_database_verifications.submit(ver_id: "id", {})
 ```
 
+### Transactions
+
+```ruby
+client.transactions.create({})
+client.transactions.retrieve(txn_id: "id")
+```
+
 ### User Audit Logs
 
 ```ruby

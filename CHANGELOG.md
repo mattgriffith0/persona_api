@@ -1,3 +1,8 @@
+== [0.3.0] - 2022-11-07
+
+* Add Transactions Endpoint
+* Bug fixes
+
 == [0.2.0] - 2022-08-18
 
 * Update README.md

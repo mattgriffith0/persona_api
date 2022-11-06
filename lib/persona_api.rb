@@ -27,6 +27,7 @@ module PersonaApi
   autoload :PhoneNumberVerification, "persona_api/objects/phone_number_verification"
   autoload :PhoneCarrierVerification, "persona_api/objects/phone_carrier_verification"
   autoload :TinDatabaseVerification, "persona_api/objects/tin_database_verification"
+  autoload :Transaction, "persona_api/objects/transaction"
 
   # resources
   autoload :AccountsResource, "persona_api/resources/accounts"
@@ -46,4 +47,5 @@ module PersonaApi
   autoload :PhoneNumberVerificationsResource, "persona_api/resources/phone_number_verifications"
   autoload :PhoneCarrierVerificationsResource, "persona_api/resources/phone_carrier_verifications"
   autoload :TinDatabaseVerificationsResource, "persona_api/resources/tin_database_verifications"
+  autoload :TransactionsResource, "persona_api/resources/transactions"
 end

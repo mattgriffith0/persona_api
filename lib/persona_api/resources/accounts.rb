@@ -10,7 +10,7 @@ module PersonaApi
     end
 
     def create(**attributes)
-      Account.new post_request("inquiries", body: attributes).body.dig("data")
+      Account.new post_request("accounts", body: attributes).body.dig("data")
     end
 
     def list(**params)

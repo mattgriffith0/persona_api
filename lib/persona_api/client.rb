@@ -72,6 +72,10 @@ module PersonaApi
       TinDatabaseVerificationsResource.new(self)
     end
 
+    def transactions
+      TransactionsResource.new(self)
+    end
+
     def user_audit_logs
       UserAuditLogsResource.new(self)
     end
