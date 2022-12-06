@@ -1,3 +1,7 @@
+== [0.3.1] - 2022-12-06
+
+* DB & GovID verification bug fixes
+
 == [0.3.0] - 2022-11-07
 
 * Add Transactions Endpoint

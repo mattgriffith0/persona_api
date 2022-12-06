@@ -10,8 +10,8 @@ module PersonaApi
       DatabaseVerification.new get_request("verification/databases/#{ver_id}").body.dig("data")
     end
 
-    def submit(ver_id:, **attributes)
-      DatabaseVerification.new post_request("verification/databases/#{ver_id}/submit", body: attributes).body.dig("data")
+    def submit(ver_id:)
+      DatabaseVerification.new post_request("verification/databases/#{ver_id}/submit").body.dig("data")
     end
   end
 end
