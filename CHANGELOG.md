@@ -1,3 +1,7 @@
+== [0.3.1.1] - 2022-12-06
+
+* Bug fixes
+
 == [0.3.1] - 2022-12-06
 
 * DB & GovID verification bug fixes
