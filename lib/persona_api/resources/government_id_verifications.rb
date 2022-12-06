@@ -10,8 +10,8 @@ module PersonaApi
       GovernmentIdVerification.new get_request("verification/government-ids/#{ver_id}").body.dig("data")
     end
 
-    def submit(ver_id:)
-      GovernmentIdVerification.new post_request("verification/government-ids/#{ver_id}/submit").body.dig("data")
+    def submit(ver_id:, **attributes)
+      GovernmentIdVerification.new post_request("verification/government-ids/#{ver_id}/submit", body: attributes).body.dig("data")
     end
   end
 end
