@@ -10,8 +10,8 @@ module PersonaApi
       SelfieVerification.new get_request("verification/selfies/#{ver_id}").body.dig("data")
     end
 
-    def submit(ver_id:)
-      SelfieVerification.new post_request("verification/selfies/#{ver_id}/submit").body.dig("data")
+    def submit(ver_id:, **attributes)
+      SelfieVerification.new post_request("verification/selfies/#{ver_id}/submit", body: attributes).body.dig("data")
     end
   end
 end
