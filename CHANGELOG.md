@@ -1,3 +1,7 @@
+== [0.3.2] - 2023-06-30
+
+* Add Selfie Verification Endpoint
+
 == [0.3.1.1] - 2022-12-06
 
 * Bug fixes

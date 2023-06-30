@@ -185,6 +185,13 @@ client.reports.add_tag(rep_id: "id", {})
 client.reports.remove_tag(rep_id: "id", {})
 client.reports.set_all_tags(rep_id: "id", {})
 ```
+### Selfie Verifications
+
+```ruby
+client.selfie_verifications.create({})
+client.selfie_verifications.retrieve(ver_id: "id")
+client.selfie_verifications.submit(ver_id: "id")
+```
 
 ### TIN Database Verifications
 

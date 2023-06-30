@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["mattgriffith0@gmail.com"]
 
   spec.summary = "An API wrapper for the public Persona API."
-  spec.description = "Write more in here later."
+  spec.description = "Persona provides a powerful, secure platform to help organizations collect, verify, store, and analyze the identity of any individual in the world. A frontend, conversion-optimized user interface makes it easy to start verifying identities in minutes."
   spec.homepage = "https://github.com/mattgriffith0/persona_api"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"

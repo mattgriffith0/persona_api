@@ -68,6 +68,10 @@ module PersonaApi
       ReportsResource.new(self)
     end
 
+    def selfie_verifications
+      SelfieVerificationsResource.new(self)
+    end
+
     def tin_database_verifications
       TinDatabaseVerificationsResource.new(self)
     end
