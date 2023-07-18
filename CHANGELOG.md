@@ -1,3 +1,7 @@
+== [0.3.2.1] - 2023-07-18
+
+* Patch/Put request bug fixes
+
 == [0.3.2.1] - 2023-06-20
 
 * Bug fixes!

@@ -14,11 +14,11 @@ module PersonaApi
       handle_response client.connection.post(url, body, headers)
     end
 
-    def patch(url, body:, headers: {})
+    def patch_request(url, body:, headers: {})
       handle_response client.connection.patch(url, body, headers)
     end
 
-    def put(url, body:, headers: {})
+    def put_request(url, body:, headers: {})
       handle_response client.connection.put(url, body, headers)
     end
 
